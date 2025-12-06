@@ -32,7 +32,7 @@ module Properties
         uri = uri.dup
         if params && !params.empty?
           query = URI.encode_www_form(params)
-          uri.query = [ uri.query , query ].compact.join("&")
+          uri.query = [ uri.query, query ].compact.join("&")
         end
 
         http = Net::HTTP.new(uri.host, uri.port)
